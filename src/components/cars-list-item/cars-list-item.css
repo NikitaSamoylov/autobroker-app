@@ -1,0 +1,40 @@
+li {
+    list-style-type: none;
+}
+
+.cars-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 3px;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+.cars-list-item:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.cars-list-item__price {
+    width: 100px;
+    border: none;
+    outline: none;
+    text-align: right;
+    margin-right: 50px;
+}
+
+.cars-list-item-additional {
+    display: flex;
+    align-items: first baseline;
+}
+
+.cars-btns__item {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.cars-btns__item > img {
+    display: block;
+}
