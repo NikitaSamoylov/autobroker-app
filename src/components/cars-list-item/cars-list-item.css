@@ -38,3 +38,15 @@ li {
 .cars-btns__item > img {
     display: block;
 }
+
+@media screen and (max-width: 362px) {
+    .cars-list-item__price {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 331px) {
+    .cars-list-item__price {
+        margin-right: 8px;
+    }
+}
