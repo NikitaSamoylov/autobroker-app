@@ -1,0 +1,22 @@
+.app-info {
+    background-color: rgba(8, 147, 166, 1);
+    border-radius: 10px;
+    margin-bottom: 21px;
+}
+
+.app-info__content {
+    padding-top: 29px;
+    padding-bottom: 80px;
+    padding-left: 31px;
+}
+
+.app-title {
+    font-size: 32px;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.app-subtitle {
+    font-size: 24px;
+    color: #fff;
+}
