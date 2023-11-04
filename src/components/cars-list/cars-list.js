@@ -1,14 +1,15 @@
 import './cars-list.css';
 import CarsListItem from "../cars-list-item/cars-list-item";
 
-const CarsList = () => {
+const CarsList = ({data}) => {
+    const elements = data.map((item) => {
+        const {id, ...itemProps} = item;
+        return <CarsListItem key={id} {...itemProps} />
+    })
     return (
-        <div className="cars-list">
-                <CarsListItem/>
-                <CarsListItem/>
-                <CarsListItem/>
-                <CarsListItem/>
-        </div>
+        <ul className="cars-list">
+            {elements}
+        </ul>
     )
 }
 

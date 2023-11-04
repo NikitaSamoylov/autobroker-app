@@ -10,7 +10,7 @@ const AppFilter = () => {
             </button>
             <button className='app-filter-btns__item'
                     type='button'>
-                        на продаже   
+                        снизить цену   
             </button>
             <button className='app-filter-btns__item'
                     type='button'>

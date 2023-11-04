@@ -12,6 +12,10 @@ li {
     padding-right: 13px;
 }
 
+.cars-list-item--to-sale {
+    color: red;
+}
+
 .cars-list-item:not(:last-child) {
     margin-bottom: 15px;
 }

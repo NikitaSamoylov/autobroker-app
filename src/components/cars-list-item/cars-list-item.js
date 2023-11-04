@@ -1,15 +1,22 @@
 import './cars-list-item.css';
 
-const CarsListItem = () => {
+const CarsListItem = ({brand, price, decrease}) => {
     return (
         <li className="cars-list-item">
-            <span className="cars-list-item__name">Ford Focus</span>
+            <span className={decrease
+                            ? "cars-list-item__name cars-list-item--to-sale"
+                            : "cars-list-item__name"}>
+                {brand}
+            </span>
             <div className="cars-list-item-additional">
                 <input type="text"
                         className="cars-list-item__price"
-                        defaultValue={630000}/>
+                        defaultValue={price + ' ₽'}/>
                 <div className="cars-list-item__btns cars-btns">
                     <button className="cars-btns__item cars-btns__to-sale">
+                        <img src={require('../../img/sale.png')} alt="delete" />
+                    </button>
+                    <button className="cars-btns__item cars-btns__for-sale">
                         <img src={require('../../img/delete-icon.png')} alt="delete" />
                     </button>
                     <button className="cars-btns__item cars-btns__delete">
