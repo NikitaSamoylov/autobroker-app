@@ -1,0 +1,53 @@
+.car-add-form {
+    padding: 24px 18px 39px 18px;
+    border-radius: 10px;
+    background-color: rgba(8, 147, 166, 1);
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(34, 60, 80, 0.22);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(34, 60, 80, 0.22);
+    box-shadow: 0px 0px 20px 0px rgba(34, 60, 80, 0.22);
+}
+
+.car-add-form__title {
+    font-size: 24px;
+    color: #fff;
+    padding-left: 13px;
+}
+
+.car-add-form__main {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    /* padding: 10px 13px 10px 18px; */
+    border-radius: 5px;
+    border: none;
+}
+
+.car-add-form__btn {
+    font-size: 16px;
+    padding: 9px 30px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.car-add-form__btn:hover {
+    background-color: rgb(10, 169, 190);
+    border-color: rgb(10, 169, 190);
+    color: #fff;
+}
+
+.car-add-form__input {
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-right: 13px;
+    flex-grow: 1;
+    padding: 10px 13px 10px 13px;
+}
+
+.car-add-form__input::placeholder {
+    font-size: 16px;
+    color: rgb(196, 192, 192);
+}
