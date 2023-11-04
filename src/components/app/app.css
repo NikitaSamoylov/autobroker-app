@@ -1,4 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+
 .app {
     margin: 0 auto;
     max-width: 716px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
