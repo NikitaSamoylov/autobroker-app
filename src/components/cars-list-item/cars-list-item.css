@@ -12,6 +12,10 @@ li {
     padding-right: 13px;
 }
 
+.cars-list-item__name {
+    cursor: pointer;
+}
+
 .cars-list-item--to-sale {
     color: red;
 }
@@ -37,10 +41,25 @@ li {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    opacity: 0.2;
+    transition: .3s;
 }
 
 .cars-btns__item > img {
     display: block;
+}
+
+.cars-btns__for-sale {
+    transition: .3s;
+}
+
+/* .cars-btns__for-sale--hidden {
+    transition: .3s;
+    opacity: 0.3;
+} */
+
+.cars-btns__item--active {
+    opacity: 1;
 }
 
 @media screen and (max-width: 362px) {
