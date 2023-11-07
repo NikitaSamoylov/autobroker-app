@@ -10,6 +10,7 @@ li {
     padding-bottom: 3px;
     padding-left: 13px;
     padding-right: 13px;
+    transition: .3s;
 }
 
 .cars-list-item__name {
@@ -52,11 +53,6 @@ li {
 .cars-btns__for-sale {
     transition: .3s;
 }
-
-/* .cars-btns__for-sale--hidden {
-    transition: .3s;
-    opacity: 0.3;
-} */
 
 .cars-btns__item--active {
     opacity: 1;

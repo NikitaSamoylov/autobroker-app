@@ -13,13 +13,24 @@ class App extends Component {
         super(props);
         this.state = {
             data: [
-                {brand: 'ford focus', price: 675000, decrease: false, id: 1, onSale: false},
+                {brand: 'ford focus', price: 675000, decrease: false, id: 1, onSale: true},
                 {brand: 'chevrolet cruze', price: 630000, decrease: false, id: 2, onSale: false},
-                {brand: 'cadillac escalade', price: 2630000, decrease: false, id: 3, onSale: false},
+                {brand: 'cadillac escalade', price: 2630000, decrease: false, id: 3, onSale: true},
                 {brand: 'toyota corolla', price: 730000, decrease: false, id: 4, onSale: false},
             ]
         };
-        this.maxId = 4;
+        this.maxId = 5;
+    }
+
+    sales = (id, prop) => {
+        this.setState(({data}) => ({
+            data: data.map((item) => {
+                if (item.id === id) {
+                    return {...item, [prop]: !item[prop]}
+                }
+                return item;
+            })
+        }))
     }
 
     deleteItem = (id) => {
@@ -37,26 +48,28 @@ class App extends Component {
             decrease: false,
             id: this.maxId++,
             onSale: false,
-        }
-        this.setState(({data}) => {
-            const newArr = [...data, newItem]
-            return {
-                data: newArr
-            }
-        })
+        };
+        this.setState(({data}) => ({
+            data: [...data, newItem]
+        }))
     }
 
     render() {
+        const totalItems = this.state.data;
+        const onSale = this.state.data.filter((item) => item.onSale === true);
         return (
             <div className="app">
-                <AppInfo/>
+                <AppInfo totalItems={totalItems}
+                        onSale={onSale}/>
                 <div className="app-search">
                     <AppSearch/>
                     <AppFilter/>
                 </div>
-                <CarsList data={this.state.data}
-                            deleteItem={this.deleteItem}/>
-                <CarAddForm onAdd={this.addItem}/>
+                <CarsList
+                    data={this.state.data}
+                    deleteItem={this.deleteItem}
+                    forSale={this.sales} />
+                <CarAddForm addNewItem={this.addItem}/>
             </div>
         )
     }

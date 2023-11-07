@@ -8,19 +8,21 @@
 }
 
 .app-info__content {
-    padding-top: 29px;
-    padding-bottom: 80px;
-    padding-left: 31px;
-    padding-right: 31px;
+    padding: 35px 31px 40px 31px;
 }
 
 .app-title {
     font-size: 32px;
-    margin-bottom: 8px;
+    margin-top: 0;
+    margin-bottom: 25px;
     color: #fff;
 }
 
 .app-subtitle {
     font-size: 24px;
     color: #fff;
+    margin-bottom: 0;
+}
+.app-subtitle--all {
+    margin-bottom: 15px;
 }

@@ -6,7 +6,7 @@ class CarAddForm extends Component {
         super(props);
         this.state = {
             brand: '',
-            price: undefined,
+            price: '',
         }
     }
 
@@ -18,11 +18,11 @@ class CarAddForm extends Component {
 
     onSubmit = (e) => {
         e.preventDefault();
-        this.props.onAdd(this.state.brand, this.state.price);
-        this.setState({
+        this.props.addNewItem(this.state.brand, this.state.price);
+        this.setState(({brand, price}) => ({
             brand: '',
             price: ''
-        })
+        }))
     }
 
     render() {
