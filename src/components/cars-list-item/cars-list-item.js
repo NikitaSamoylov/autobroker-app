@@ -23,7 +23,7 @@ class CarsListItem extends Component {
     }
 
     render() {
-        const {brand, price} = this.props;
+        const {brand, price, deleteItem} = this.props;
         const {decrease, onSale} = this.state;
         return (
             <li className="cars-list-item">
@@ -44,7 +44,7 @@ class CarsListItem extends Component {
                                             onClick={this.onDecrease}>
                             <img src={require('../../img/sale.png')} alt="delete" />
                         </button>
-                        <button className="cars-btns__item cars-btns__delete">
+                        <button className="cars-btns__item cars-btns__delete" onClick={deleteItem}>
                             <img src={require('../../img/delete-icon.png')} alt="delete" />
                         </button>
                         <button className={onSale
