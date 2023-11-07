@@ -16,10 +16,19 @@ class CarAddForm extends Component {
         })
     }
 
+    onSubmit = (e) => {
+        e.preventDefault();
+        this.props.onAdd(this.state.brand, this.state.price);
+        this.setState({
+            brand: '',
+            price: ''
+        })
+    }
+
     render() {
         const {brand, price} = this.state;
         return (
-            <form className="car-add-form">
+            <form className="car-add-form" onSubmit={this.onSubmit}>
                 <h2 className='car-add-form__title'>добавьте автомобиль</h2>
                 <div className="car-add-form__main">
                     <input type="text"

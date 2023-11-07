@@ -18,13 +18,30 @@ class App extends Component {
                 {brand: 'cadillac escalade', price: 2630000, decrease: false, id: 3, onSale: false},
                 {brand: 'toyota corolla', price: 730000, decrease: false, id: 4, onSale: false},
             ]
-        }
+        };
+        this.maxId = 4;
     }
 
     deleteItem = (id) => {
         this.setState(({data}) => {
             return {
                 data: data.filter((item) => item.id !== id)
+            }
+        })
+    }
+
+    addItem = (brand, price) => {
+        const newItem = {
+            brand,
+            price,
+            decrease: false,
+            id: this.maxId++,
+            onSale: false,
+        }
+        this.setState(({data}) => {
+            const newArr = [...data, newItem]
+            return {
+                data: newArr
             }
         })
     }
@@ -39,7 +56,7 @@ class App extends Component {
                 </div>
                 <CarsList data={this.state.data}
                             deleteItem={this.deleteItem}/>
-                <CarAddForm/>
+                <CarAddForm onAdd={this.addItem}/>
             </div>
         )
     }
