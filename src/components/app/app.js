@@ -17,7 +17,8 @@ class App extends Component {
                 {brand: 'chevrolet cruze', price: 630000, decrease: false, id: 2, onSale: false},
                 {brand: 'cadillac escalade', price: 2630000, decrease: false, id: 3, onSale: true},
                 {brand: 'toyota corolla', price: 730000, decrease: false, id: 4, onSale: false},
-            ]
+            ], 
+            searchValue: '',
         };
         this.maxId = 5;
     }
@@ -54,19 +55,36 @@ class App extends Component {
         }))
     }
 
+    search = (data, searchValue) => {
+        if (searchValue.length === 0) {
+            return data;
+        }
+
+        return data.filter((item) => {
+            return item.brand.startsWith(searchValue)
+        });
+    }
+
+    onUpdateValue = (searchValue) => {
+        this.setState({searchValue})
+    }
+
     render() {
-        const totalItems = this.state.data;
-        const onSale = this.state.data.filter((item) => item.onSale === true);
+        const {data, searchValue} = this.state;
+        const totalItems = data;
+        const onSale = data.filter((item) => item.onSale === true);
+        const visibleData = this.search(data, searchValue);
         return (
             <div className="app">
                 <AppInfo totalItems={totalItems}
                         onSale={onSale}/>
                 <div className="app-search">
-                    <AppSearch/>
+                    <AppSearch searchValue={searchValue}
+                                onUpdateValue={this.onUpdateValue} />
                     <AppFilter/>
                 </div>
                 <CarsList
-                    data={this.state.data}
+                    data={visibleData}
                     deleteItem={this.deleteItem}
                     forSale={this.sales} />
                 <CarAddForm addNewItem={this.addItem}/>
