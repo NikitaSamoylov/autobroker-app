@@ -17,10 +17,12 @@ class App extends Component {
                 {brand: 'chevrolet cruze', price: 630000, decrease: false, id: 2, onSale: false},
                 {brand: 'cadillac escalade', price: 2630000, decrease: false, id: 3, onSale: true},
                 {brand: 'toyota corolla', price: 730000, decrease: false, id: 4, onSale: false},
+                {brand: 'toyota celica', price: 830000, decrease: false, id: 5, onSale: false},
             ], 
             searchValue: '',
+            filter: 'allItems',
         };
-        this.maxId = 5;
+        this.maxId = 6;
     }
 
     sales = (id, prop) => {
@@ -55,9 +57,39 @@ class App extends Component {
         }))
     }
 
-    search = (data, searchValue) => {
+    search = (data, searchValue, filter) => {
         if (searchValue.length === 0) {
             return data;
+        }
+        else if (filter !== '') {
+            console.log(filter)
+        }
+
+        return data.filter((item) => {
+            return item.brand.startsWith(searchValue)
+        });
+    }
+
+    filterData = (data, filter) => {
+        switch(filter) {
+            case 'decrease': 
+                return data.filter((item) => {
+                    return item.decrease
+                })
+            case 'onSale': 
+                return data.filter((item) => {
+                    return item.onSale
+                })    
+            default:
+                return data
+        }
+    }
+    search = (data, searchValue, filter) => {
+        if (searchValue.length === 0) {
+            return data;
+        }
+        else if (filter !== '') {
+            console.log(filter)
         }
 
         return data.filter((item) => {
@@ -69,11 +101,15 @@ class App extends Component {
         this.setState({searchValue})
     }
 
+    onUpdateFilter = (filter) => {
+        this.setState({filter})
+    }
+
     render() {
-        const {data, searchValue} = this.state;
+        const {data, searchValue, filter} = this.state;
         const totalItems = data;
         const onSale = data.filter((item) => item.onSale === true);
-        const visibleData = this.search(data, searchValue);
+        const visibleData = this.filterData(this.search(data, searchValue), filter);
         return (
             <div className="app">
                 <AppInfo totalItems={totalItems}
@@ -81,7 +117,7 @@ class App extends Component {
                 <div className="app-search">
                     <AppSearch searchValue={searchValue}
                                 onUpdateValue={this.onUpdateValue} />
-                    <AppFilter/>
+                    <AppFilter filter={filter} onUpdateFilter={this.onUpdateFilter}/>
                 </div>
                 <CarsList
                     data={visibleData}
