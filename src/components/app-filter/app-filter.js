@@ -31,25 +31,6 @@ class AppFilter extends Component {
         return (
             <div className="app-filter-btns">
                 {btns}
-                {/* <button className='app-filter-btns__item
-                        app-filter-btns__item--active'
-                        type='button'
-                        data-attr="allItems"
-                        onClick={this.updateFilter}>
-                            все авто    
-                </button>
-                <button className='app-filter-btns__item'
-                        type='button'
-                        data-attr="onSale"
-                        onClick={this.updateFilter}>
-                            на продаже    
-                </button>
-                <button className='app-filter-btns__item'
-                        type='button'
-                        data-attr="decrease"
-                        onClick={this.updateFilter}>
-                            снизить цену   
-                </button> */}
             </div>
         )
     }

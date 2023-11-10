@@ -13,7 +13,9 @@ const CarsList = ({data, deleteItem, forSale}) => {
 
     return (
         <ul className="cars-list">
-            {elements}
+            {elements.length !== 0
+                ? elements
+                : <li className="cars-list-item">авто еще не выбраны</li>}
         </ul>
     )
 }

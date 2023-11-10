@@ -110,6 +110,7 @@ class App extends Component {
         const totalItems = data;
         const onSale = data.filter((item) => item.onSale === true);
         const visibleData = this.filterData(this.search(data, searchValue), filter);
+        
         return (
             <div className="app">
                 <AppInfo totalItems={totalItems}
