@@ -25,6 +25,17 @@ class App extends Component {
         this.maxId = 6;
     }
 
+    changePrice = (id, price) => {
+        this.setState(({data}) => ({
+            data: data.map((item) => {
+                if (item.id === id) {
+                    return {...item, price: price}
+                }
+                return item;
+            })
+        }))
+    }
+
     sales = (id, prop) => {
         this.setState(({data}) => ({
             data: data.map((item) => {
@@ -57,12 +68,9 @@ class App extends Component {
         }))
     }
 
-    search = (data, searchValue, filter) => {
+    search = (data, searchValue) => {
         if (searchValue.length === 0) {
             return data;
-        }
-        else if (filter !== '') {
-            console.log(filter)
         }
 
         return data.filter((item) => {
@@ -84,18 +92,6 @@ class App extends Component {
                 return data
         }
     }
-    search = (data, searchValue, filter) => {
-        if (searchValue.length === 0) {
-            return data;
-        }
-        else if (filter !== '') {
-            console.log(filter)
-        }
-
-        return data.filter((item) => {
-            return item.brand.startsWith(searchValue)
-        });
-    }
 
     onUpdateValue = (searchValue) => {
         this.setState({searchValue})
@@ -110,7 +106,7 @@ class App extends Component {
         const totalItems = data;
         const onSale = data.filter((item) => item.onSale === true);
         const visibleData = this.filterData(this.search(data, searchValue), filter);
-        
+
         return (
             <div className="app">
                 <AppInfo totalItems={totalItems}
@@ -123,7 +119,8 @@ class App extends Component {
                 <CarsList
                     data={visibleData}
                     deleteItem={this.deleteItem}
-                    forSale={this.sales} />
+                    forSale={this.sales}
+                    changePrice={this.changePrice} />
                 <CarAddForm addNewItem={this.addItem}/>
             </div>
         )

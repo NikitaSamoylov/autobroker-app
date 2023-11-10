@@ -12,7 +12,7 @@ class CarAddForm extends Component {
 
     onValueChange = (e) => {
         this.setState({
-            [e.target.name]: e.target.value
+            [e.target.name]: e.target.value.replace('.', '')
         })
     }
 
@@ -34,16 +34,18 @@ class CarAddForm extends Component {
                     <input type="text"
                             className="car-add-form__input
                                         car-add-form__input--model"
-                            placeholder="марка"
+                            placeholder="марка, модель"
                             name='brand'
                             value={brand}
+                            required
                             onChange={this.onValueChange} />
-                    <input type="text"
+                    <input type="number"
                             className="car-add-form__input
                                         car-add-form__input--price"
                             placeholder="цена"
                             name='price'
                             value={price}
+                            required
                             onChange={this.onValueChange} />
                     <button className="car-add-form__btn"
                             type="submit">

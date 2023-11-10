@@ -15,6 +15,7 @@
     border-radius: 5px;
     border: none;
     margin-bottom: 18px;
+    outline: none;
 }
 
 .app-search__input::placeholder {

@@ -2,6 +2,7 @@ import { Component } from 'react';
 import './cars-list-item.css';
 
 class CarsListItem extends Component {
+
     render() {
         const {
             brand,
@@ -10,6 +11,7 @@ class CarsListItem extends Component {
             onSale,
             deleteItem,
             forSale,
+            changePrice,
         } = this.props;
 
         return (
@@ -24,7 +26,8 @@ class CarsListItem extends Component {
                 <div className="cars-list-item-additional">
                     <input type="text"
                         className="cars-list-item__price"
-                        defaultValue={price + ' ₽'}/>
+                        defaultValue={price + ' ₽'}
+                        onChange={changePrice}/>
                     <div className="cars-list-item__btns cars-btns">
                         <button className={decrease 
                                             ? "cars-btns__item cars-btns__item--active"
