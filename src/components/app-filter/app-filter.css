@@ -28,17 +28,17 @@
     margin-right: 15px;
 } */
 
-@media screen and (max-width: 471px) {
+/* @media screen and (max-width: 471px) {
     .app-filter-btns__item:last-child {
         margin-top: 15px;
     }
-}
+} */
 
-@media screen and (max-width: 331px) {
+/* @media screen and (max-width: 331px) {
     .app-filter-btns__item:not(:last-child) {
         margin-right: 10px;
     }
     .app-filter-btns__item:nth-child(2) {
         margin-right: 0;
     }
-}
+} */

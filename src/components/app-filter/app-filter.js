@@ -29,6 +29,19 @@ class AppFilter extends Component {
                 border-color: rgb(10, 169, 190);
                 color: #fff;
             }
+            @media screen and (max-width: 471px) {
+                &:last-child {
+                    margin-top: 15px;
+                }
+            }
+            @media screen and (max-width: 336px) {
+                &:not(:last-child) {
+                    margin-right: 10px;
+                }
+                &:nth-child(2) {
+                    margin-right: 0;
+                }
+            }
         `
         const StyledBtnActive = styled(StyledBtnInit)`
             background-color: #fff;
