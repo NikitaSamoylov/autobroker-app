@@ -1,4 +1,4 @@
-.app-filter-btns__item {
+/* .app-filter-btns__item {
     font-size: 16px;
     width: 135px;
     height: 37px;
@@ -8,25 +8,25 @@
     color: #fff;
     cursor: pointer;
     transition: .3s;
-}
+} */
 
-.app-filter-btns__item:hover {
+/* .app-filter-btns__item:hover {
     background-color: rgb(10, 169, 190);
     border-color: rgb(10, 169, 190);
     color: #fff;
-}
+} */
 
-.app-filter-btns__item--active,
+/* .app-filter-btns__item--active,
 .app-filter-btns__item--active:hover{
     background-color: #fff;
     border-color: #fff;
     color: black;
     cursor: default;
-}
+} */
 
-.app-filter-btns__item:not(:last-child) {
+/* .app-filter-btns__item:not(:last-child) {
     margin-right: 15px;
-}
+} */
 
 @media screen and (max-width: 471px) {
     .app-filter-btns__item:last-child {

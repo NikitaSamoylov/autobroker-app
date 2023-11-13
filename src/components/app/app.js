@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import styled from 'styled-components';
 
 import AppInfo from '../app-info/app-info';
 import AppSearch from '../app-search/app-search';
@@ -6,7 +7,7 @@ import AppFilter from '../app-filter/app-filter';
 import CarsList from '../cars-list/cars-list';
 import CarAddForm from '../car-add-form/car-add-form';
 
-import './app.css';
+// import './app.css';
 
 class App extends Component {
     constructor(props) {
@@ -107,22 +108,37 @@ class App extends Component {
         const onSale = data.filter((item) => item.onSale === true);
         const visibleData = this.filterData(this.search(data, searchValue), filter);
 
+        const StyledApp = styled.div`
+            padding-top: 28px;
+            padding-bottom: 28px;
+            margin: 0 auto;
+            max-width: 716px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        `
+        const StyledAppSearch = styled.div`
+            padding: 29px 18px 30px 18px;
+            background-color: rgba(8, 147, 166, 1);
+            border-radius: 10px;
+            margin-bottom: 21px;
+            box-shadow: 0px 0px 20px 0px rgba(34, 60, 80, 0.22);
+        `
+
         return (
-            <div className="app">
+            <StyledApp>
                 <AppInfo totalItems={totalItems}
                         onSale={onSale}/>
-                <div className="app-search">
+                <StyledAppSearch>
                     <AppSearch searchValue={searchValue}
                                 onUpdateValue={this.onUpdateValue} />
                     <AppFilter filter={filter} onUpdateFilter={this.onUpdateFilter}/>
-                </div>
+                </StyledAppSearch>
                 <CarsList
                     data={visibleData}
                     deleteItem={this.deleteItem}
                     forSale={this.sales}
                     changePrice={this.changePrice} />
                 <CarAddForm addNewItem={this.addItem}/>
-            </div>
+            </StyledApp>
         )
     }
 }
