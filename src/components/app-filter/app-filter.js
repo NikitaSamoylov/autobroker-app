@@ -61,7 +61,7 @@ class AppFilter extends Component {
         })
 
         return (
-            <div className="app-filter-btns">
+            <div>
                 {btns}
             </div>
         )
