@@ -9,6 +9,21 @@ import CarAddForm from '../car-add-form/car-add-form';
 
 // import './app.css';
 
+const StyledApp = styled.div`
+    padding-top: 28px;
+    padding-bottom: 28px;
+    margin: 0 auto;
+    max-width: 716px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+`
+const StyledAppSearch = styled.div`
+    padding: 29px 18px 30px 18px;
+    background-color: rgba(8, 147, 166, 1);
+    border-radius: 10px;
+    margin-bottom: 21px;
+    box-shadow: 0px 0px 20px 0px rgba(34, 60, 80, 0.22);
+`
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -107,21 +122,6 @@ class App extends Component {
         const totalItems = data;
         const onSale = data.filter((item) => item.onSale === true);
         const visibleData = this.filterData(this.search(data, searchValue), filter);
-
-        const StyledApp = styled.div`
-            padding-top: 28px;
-            padding-bottom: 28px;
-            margin: 0 auto;
-            max-width: 716px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-        `
-        const StyledAppSearch = styled.div`
-            padding: 29px 18px 30px 18px;
-            background-color: rgba(8, 147, 166, 1);
-            border-radius: 10px;
-            margin-bottom: 21px;
-            box-shadow: 0px 0px 20px 0px rgba(34, 60, 80, 0.22);
-        `
 
         return (
             <StyledApp>

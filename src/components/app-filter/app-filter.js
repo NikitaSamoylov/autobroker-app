@@ -2,6 +2,50 @@ import { Component } from 'react';
 import styled from 'styled-components';
 // import './app-filter.css';
 
+const StyledBtnInit = styled.button`
+    font-size: 16px;
+    width: 135px;
+    height: 37px;
+    border: 1px solid #d4d1d1;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s;
+    &:not(:last-child) {
+        margin-right: 15px;
+    }
+    &:hover {
+        background-color: rgb(10, 169, 190);
+        border-color: rgb(10, 169, 190);
+        color: #fff;
+    }
+    @media screen and (max-width: 471px) {
+        &:last-child {
+            margin-top: 15px;
+        }
+    }
+    @media screen and (max-width: 336px) {
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+        &:nth-child(2) {
+            margin-right: 0;
+        }
+    }
+`
+const StyledBtnActive = styled(StyledBtnInit)`
+    background-color: #fff;
+    border-color: #fff;
+    color: black;
+    cursor: default;
+    &:hover {
+        background-color: #fff;
+        border-color: #fff;
+        color: black;
+    }
+`
+
 class AppFilter extends Component {
 
     updateFilter = (e) => {
@@ -10,51 +54,6 @@ class AppFilter extends Component {
     }
 
     render() {
-
-        const StyledBtnInit = styled.button`
-            font-size: 16px;
-            width: 135px;
-            height: 37px;
-            border: 1px solid #d4d1d1;
-            border-radius: 5px;
-            background-color: transparent;
-            color: #fff;
-            cursor: pointer;
-            transition: .3s;
-            &:not(:last-child) {
-                margin-right: 15px;
-            }
-            &:hover {
-                background-color: rgb(10, 169, 190);
-                border-color: rgb(10, 169, 190);
-                color: #fff;
-            }
-            @media screen and (max-width: 471px) {
-                &:last-child {
-                    margin-top: 15px;
-                }
-            }
-            @media screen and (max-width: 336px) {
-                &:not(:last-child) {
-                    margin-right: 10px;
-                }
-                &:nth-child(2) {
-                    margin-right: 0;
-                }
-            }
-        `
-        const StyledBtnActive = styled(StyledBtnInit)`
-            background-color: #fff;
-            border-color: #fff;
-            color: black;
-            cursor: default;
-            &:hover {
-                background-color: #fff;
-                border-color: #fff;
-                color: black;
-            }
-        `
-
         const btnsData = [
             {name: 'allItems', label: 'все авто'},
             {name: 'onSale', label: 'на продаже'},
