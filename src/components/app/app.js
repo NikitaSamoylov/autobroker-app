@@ -7,8 +7,6 @@ import AppFilter from '../app-filter/app-filter';
 import CarsList from '../cars-list/cars-list';
 import CarAddForm from '../car-add-form/car-add-form';
 
-// import './app.css';
-
 const StyledApp = styled.div`
     padding-top: 28px;
     padding-bottom: 28px;

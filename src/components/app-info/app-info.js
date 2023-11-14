@@ -1,4 +1,3 @@
-// import './app-info.css';
 import styled from "styled-components"
 
 // const StyledAppInfo = styled.div`

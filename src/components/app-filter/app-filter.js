@@ -1,6 +1,5 @@
 import { Component } from 'react';
 import styled from 'styled-components';
-// import './app-filter.css';
 
 const StyledBtnInit = styled.button`
     font-size: 16px;

@@ -1,5 +1,16 @@
-import './cars-list.css';
+import styled from "styled-components";
+import { StyledCarsItem } from "../cars-list-item/cars-list-item";
 import CarsListItem from "../cars-list-item/cars-list-item";
+
+const StyledCarsList = styled.ul`
+    padding: 27px 18px 43px 18px;
+    border: 1px solid rgba(222, 221, 221, 1);
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(34, 60, 80, 0.22);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(34, 60, 80, 0.22);
+    box-shadow: 0px 0px 20px 0px rgba(34, 60, 80, 0.22);
+    margin-bottom: 21px;
+`
 
 const CarsList = ({data, deleteItem, forSale, changePrice}) => {
     const elements = data.map((item) => {
@@ -13,11 +24,11 @@ const CarsList = ({data, deleteItem, forSale, changePrice}) => {
     })
 
     return (
-        <ul className="cars-list">
+        <StyledCarsList>
             {elements.length !== 0
                 ? elements
-                : <li className="cars-list-item">авто еще не выбраны</li>}
-        </ul>
+                : <StyledCarsItem>авто еще не выбраны</StyledCarsItem>}
+        </StyledCarsList>
     )
 }
 

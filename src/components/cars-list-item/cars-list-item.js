@@ -1,8 +1,7 @@
 import { Component } from 'react';
 import styled from 'styled-components';
-// import './cars-list-item.css';
 
-const StyledCarsItem = styled.li`
+export const StyledCarsItem = styled.li`
     display: flex;
     align-items: center;
     justify-content: space-between;

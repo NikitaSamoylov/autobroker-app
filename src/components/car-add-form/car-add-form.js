@@ -1,6 +1,5 @@
 import { Component } from 'react';
 import styled from 'styled-components';
-import './car-add-form.css';
 
 const StyledCarForm = styled.form`
     padding: 24px 18px 39px 18px;

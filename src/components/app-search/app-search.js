@@ -1,6 +1,5 @@
 import { Component } from 'react';
 import styled from 'styled-components';
-// import './app-search.css';
 
 const StyledAppInput = styled.input`
     display: block;
