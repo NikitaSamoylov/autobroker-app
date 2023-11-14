@@ -23,22 +23,23 @@ const StyledItemNameSale = styled(StyledItemNameInit)`
 const StyledItemInfo = styled.div`
     display: flex;
     align-items: first baseline;
+    @media screen and (max-width: 396px) {
+        flex-direction: column;
+        align-items: flex-end;
+    }
 `
 const StyledItemPrice = styled.input`
+    display: block;
     width: 100px;
     border: none;
     outline: none;
     text-align: right;
     margin-right: 50px;
-    @media screen and (max-width: 362px) {
-        & {
-            margin-right: 20px;
-        }
+    @media screen and (max-width: 437px) {
+        margin-right: 8px;
     }
-    @media screen and (max-width: 331px) {
-        & {
-            margin-right: 8px;
-        }
+    @media screen and (max-width: 396px) {
+        margin-bottom: 10px;
     }
 `
 const StyledItemBtnInit = styled.button`
@@ -47,6 +48,11 @@ const StyledItemBtnInit = styled.button`
     cursor: pointer;
     opacity: 0.2;
     transition: .3s;
+    &:not(:last-child) {
+        @media screen and (max-width: 396px) {
+            margin-right: 10px;
+        }
+    }
     img {
         display: block;
     }

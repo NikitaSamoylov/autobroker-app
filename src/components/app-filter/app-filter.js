@@ -19,10 +19,11 @@ const StyledBtnInit = styled.button`
         border-color: rgb(10, 169, 190);
         color: #fff;
     }
-    @media screen and (max-width: 471px) {
-        &:last-child {
+    &:last-child {
+        @media screen and (max-width: 471px) {
             margin-top: 15px;
         }
+        
     }
     @media screen and (max-width: 336px) {
         &:not(:last-child) {

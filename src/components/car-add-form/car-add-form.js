@@ -23,9 +23,7 @@ const StyledFormWrapper = styled.div`
     border-radius: 5px;
     border: none;
     @media screen and (max-width: 451px) {
-        & {
-            flex-direction: column;
-        }
+        flex-direction: column;
     }
 `
 const StyledFormBtn = styled.button`
@@ -42,15 +40,11 @@ const StyledFormBtn = styled.button`
         color: #fff;
     }
     @media screen and (max-width: 581px) {
-        & {
-            margin-top: 15px;
-        }
+        margin-top: 15px;
     }
     @media screen and (max-width: 451px) {
-        & {
-            margin-top: 0;
-            align-self: flex-start;
-        }
+        margin-top: 0;
+        align-self: flex-start;
     }
 `
 const StyledFormInput = styled.input`
@@ -65,10 +59,8 @@ const StyledFormInput = styled.input`
         color: rgb(196, 192, 192);
     }
     @media screen and (max-width: 451px) {
-        & {
-            margin-right: 0;
-            margin-bottom: 15px;
-        }
+        margin-right: 0;
+        margin-bottom: 15px;
     }
 `
 
