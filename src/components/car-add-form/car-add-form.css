@@ -1,29 +1,29 @@
-.car-add-form {
+/* .car-add-form {
     padding: 24px 18px 39px 18px;
     border-radius: 10px;
     background-color: rgba(8, 147, 166, 1);
     -webkit-box-shadow: 0px 0px 20px 0px rgba(34, 60, 80, 0.22);
     -moz-box-shadow: 0px 0px 20px 0px rgba(34, 60, 80, 0.22);
     box-shadow: 0px 0px 20px 0px rgba(34, 60, 80, 0.22);
-}
+} */
 
-.car-add-form__title {
+/* .car-add-form__title {
     font-size: 24px;
     color: #fff;
     padding-left: 13px;
     margin-top: 0;
-}
+} */
 
-.car-add-form__main {
+/* .car-add-form__main {
     display: inline-flex;
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
     border-radius: 5px;
     border: none;
-}
+} */
 
-.car-add-form__btn {
+/* .car-add-form__btn {
     font-size: 16px;
     padding: 9px 30px;
     border-radius: 5px;
@@ -31,15 +31,15 @@
     border: none;
     cursor: pointer;
     transition: .3s;
-}
+} */
 
-.car-add-form__btn:hover {
+/* .car-add-form__btn:hover {
     background-color: rgb(10, 169, 190);
     border-color: rgb(10, 169, 190);
     color: #fff;
-}
+} */
 
-.car-add-form__input {
+/* .car-add-form__input {
     border-radius: 5px;
     border: none;
     outline: none;
@@ -51,15 +51,15 @@
 .car-add-form__input::placeholder {
     font-size: 16px;
     color: rgb(196, 192, 192);
-}
+} */
 
-@media screen and (max-width: 581px) {
+/* @media screen and (max-width: 581px) {
     .car-add-form__btn {
         margin-top: 15px;
     }
-}
+} */
 
-@media screen and (max-width: 451px) {
+/* @media screen and (max-width: 451px) {
     .car-add-form__main {
         flex-direction: column;
     }
@@ -71,4 +71,4 @@
         margin-top: 0;
         align-self: flex-start;
     }
-}
+} */

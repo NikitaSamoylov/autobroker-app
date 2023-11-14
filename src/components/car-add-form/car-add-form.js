@@ -1,5 +1,77 @@
 import { Component } from 'react';
+import styled from 'styled-components';
 import './car-add-form.css';
+
+const StyledCarForm = styled.form`
+    padding: 24px 18px 39px 18px;
+    border-radius: 10px;
+    background-color: rgba(8, 147, 166, 1);
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(34, 60, 80, 0.22);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(34, 60, 80, 0.22);
+    box-shadow: 0px 0px 20px 0px rgba(34, 60, 80, 0.22);
+`
+const StyledFormTitle = styled.h2`
+    font-size: 24px;
+    color: #fff;
+    padding-left: 13px;
+    margin-top: 0;
+`
+const StyledFormWrapper = styled.div`
+    display: inline-flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    @media screen and (max-width: 451px) {
+        & {
+            flex-direction: column;
+        }
+    }
+`
+const StyledFormBtn = styled.button`
+    font-size: 16px;
+    padding: 9px 30px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+    &:hover {
+        background-color: rgb(10, 169, 190);
+        border-color: rgb(10, 169, 190);
+        color: #fff;
+    }
+    @media screen and (max-width: 581px) {
+        & {
+            margin-top: 15px;
+        }
+    }
+    @media screen and (max-width: 451px) {
+        & {
+            margin-top: 0;
+            align-self: flex-start;
+        }
+    }
+`
+const StyledFormInput = styled.input`
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-right: 13px;
+    flex-grow: 1;
+    padding: 10px 13px 10px 13px;
+    &::placeholder {
+        font-size: 16px;
+        color: rgb(196, 192, 192);
+    }
+    @media screen and (max-width: 451px) {
+        & {
+            margin-right: 0;
+            margin-bottom: 15px;
+        }
+    }
+`
 
 class CarAddForm extends Component {
     constructor(props) {
@@ -28,31 +100,26 @@ class CarAddForm extends Component {
     render() {
         const {brand, price} = this.state;
         return (
-            <form className="car-add-form" onSubmit={this.onSubmit}>
-                <h2 className='car-add-form__title'>добавьте автомобиль</h2>
-                <div className="car-add-form__main">
-                    <input type="text"
-                            className="car-add-form__input
-                                        car-add-form__input--model"
+            <StyledCarForm onSubmit={this.onSubmit}>
+                <StyledFormTitle>добавьте автомобиль</StyledFormTitle>
+                <StyledFormWrapper>
+                    <StyledFormInput type="text"
                             placeholder="марка, модель"
                             name='brand'
                             value={brand}
                             required
                             onChange={this.onValueChange} />
-                    <input type="number"
-                            className="car-add-form__input
-                                        car-add-form__input--price"
+                    <StyledFormInput type="number"
                             placeholder="цена"
                             name='price'
                             value={price}
                             required
                             onChange={this.onValueChange} />
-                    <button className="car-add-form__btn"
-                            type="submit">
-                                добавить
-                    </button>
-                </div>
-            </form>
+                    <StyledFormBtn type="submit">
+                        добавить
+                    </StyledFormBtn>
+                </StyledFormWrapper>
+            </StyledCarForm>
         )
     }
 }
