@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/autobroker-app/static/js/main.ba6f577a.js",
+    "index.html": "/autobroker-app/index.html",
+    "main.ba6f577a.js.map": "/autobroker-app/static/js/main.ba6f577a.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.ba6f577a.js"
+  ]
+}
