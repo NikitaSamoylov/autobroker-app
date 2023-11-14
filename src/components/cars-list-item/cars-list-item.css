@@ -1,8 +1,8 @@
-li {
+/* li {
     list-style-type: none;
-}
+} */
 
-.cars-list-item {
+/* .cars-list-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -11,61 +11,61 @@ li {
     padding-left: 13px;
     padding-right: 13px;
     transition: .5s;
-}
+} */
 
-.cars-list-item__name {
+/* .cars-list-item__name {
     cursor: pointer;
-}
+} */
 
-.cars-list-item--to-sale {
+/* .cars-list-item--to-sale {
     color: red;
-}
+} */
 
-.cars-list-item:not(:last-child) {
+/* .cars-list-item:not(:last-child) {
     margin-bottom: 15px;
-}
+} */
 
-.cars-list-item__price {
+/* .cars-list-item__price {
     width: 100px;
     border: none;
     outline: none;
     text-align: right;
     margin-right: 50px;
-}
+} */
 
-.cars-list-item-additional {
+/* .cars-list-item-additional {
     display: flex;
     align-items: first baseline;
-}
+} */
 
-.cars-btns__item {
+/* .cars-btns__item {
     background-color: transparent;
     border: none;
     cursor: pointer;
     opacity: 0.2;
     transition: .3s;
-}
+} */
 
-.cars-btns__item > img {
+/* .cars-btns__item > img {
     display: block;
-}
+} */
 
-.cars-btns__for-sale {
+/* .cars-btns__for-sale {
     transition: .3s;
-}
+} */
 
-.cars-btns__item--active {
+/* .cars-btns__item--active {
     opacity: 1;
-}
+} */
 
-@media screen and (max-width: 362px) {
+/* @media screen and (max-width: 362px) {
     .cars-list-item__price {
         margin-right: 20px;
     }
-}
+} */
 
-@media screen and (max-width: 331px) {
+/* @media screen and (max-width: 331px) {
     .cars-list-item__price {
         margin-right: 8px;
     }
-}
+} */
